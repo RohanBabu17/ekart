@@ -1,0 +1,73 @@
+
+<div class="main-body">
+    <div class="container">
+        <div class="row cform">
+            <div class="col-md-6 col-sm-6 signin">
+                <h4><b>Sign in</b></h4>
+                <form #loginform="ngForm" (ngSubmit)="onLogin(loginform)">
+                    <label>Name: </label>
+                    <input type="text" class="form-control txt" placeholder="Name *" ngModel name="Name">
+                    <label>Password:</label>
+                    <input type="password" class="form-control txt" placeholder="Password *" ngModel name="Password">
+                    <button type="submit" class="btn btn-primary btn1">Login</button>
+                </form>
+            </div>
+            <div class="col-md-6 col-sd-6 newuser">
+                <h4><b>Create Account</b></h4>
+                <form [formGroup]="cform">
+                    <label>Name :</label>
+                    <input type="text" class="form-control txt" placeholder="Name" formControlName="Name">
+                    <div *ngIf="(this.cform.get('Name')?.touched||this.cform.get('Name')?.dirty)&& this.cform.get('Name')?.errors">Invalid form </div>
+                    
+                    <label> Email :</label>
+                    <input type="text" class="form-control txt" placeholder="Email" formControlName="Email">
+                    <div *ngIf="(this.cform.get('Email')?.touched||this.cform.get('Email')?.dirty)&& this.cform.get('Email')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Contact Num :</label>
+                    <input type="text" class="form-control txt" placeholder="Phone Num" formControlName="Contactnum">
+                    <div *ngIf="(this.cform.get('Contactnum')?.touched||this.cform.get('Contactnum')?.dirty)&& this.cform.get('Contactnum')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Password :</label>
+                    <input type="password" class="form-control txt" placeholder="Password" formControlName="Password">
+                    <div *ngIf="(this.cform.get('Password')?.touched||this.cform.get('Password')?.dirty)&& this.cform.get('Password')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Confirm Password :</label>
+                    <input type="password" class="form-control txt" placeholder="Confirm Password"  formControlName="Confirmpassword" >
+                    <div *ngIf="(this.cform.get('Confirmpassword')?.touched||this.cform.get('Confirmpassword')?.dirty)&& this.cform.get('Confirmpassword')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Address :</label>
+                    <input type="text" class="form-control txt" placeholder="Address" formControlName="Address">
+                    <div *ngIf="(this.cform.get('Address')?.touched||this.cform.get('Address')?.dirty)&& this.cform.get('Address')?.errors">
+                        Invalid form </div>
+                    
+                    <label>City :</label>
+                    <input type="text" class="form-control txt" placeholder="City" formControlName="City">
+                    <div *ngIf="(this.cform.get('City')?.touched||this.cform.get('City')?.dirty)&& this.cform.get('City')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Pin Code :</label>
+                    <input type="text" class="form-control txt" placeholder="Pin Code" formControlName="Pincode">
+                    <div *ngIf="(this.cform.get('Pincode')?.touched||this.cform.get('Pincode')?.dirty)&& this.cform.get('Pincode')?.errors">
+                        Invalid form </div>
+                    
+                    <label>State :</label>
+                    <input type="text" class="form-control txt" placeholder="State" formControlName="State">
+                    <div *ngIf="(this.cform.get('State')?.touched||this.cform.get('State')?.dirty)&& this.cform.get('State')?.errors">
+                        Invalid form </div>
+                    
+                    <label>Country :</label>
+                    <input type="text" class="form-control txt" placeholder="Country" formControlName="Country">
+                    <div *ngIf="(this.cform.get('Country')?.touched||this.cform.get('Country')?.dirty)&& this.cform.get('Country')?.errors">
+                        Invalid form </div>
+                    
+                    <button class="btn btn-primary btn1" (click)="reg()">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

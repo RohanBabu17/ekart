@@ -1,0 +1,88 @@
+<div class="card container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a (click)="filter('')">
+        <h4>All</h4>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('men')">
+        <h4>Men</h4>
+      </a>
+    </div>
+    <div class="item">
+      <a  (click)="filter('women')">
+        <h4>Women</h4>
+      </a>
+    </div>
+    <div class="item">
+      <a  (click)="filter('kids')">
+        <h4>Kids</h4>
+      </a>
+    </div>
+    <div class="cart">
+      <a routerLink="/checkout" >
+        <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-success">{{totalitem}}</div>
+    </a>
+    </div>
+  </div>
+</div>
+
+
+    <div class="main-body">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="7500">
+            <img  src="../../assets/guy-suit-sits-chair-holds-book.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="7500">
+            <img  src="../../assets/model1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <!-- <div class="carousel-item" data-bs-interval="7500" >
+            <img  src="../../assets/young-handsome-bearded-man.jpg" class="d-block w-100" alt="...">
+          </div> -->
+          <div class="carousel-item" data-bs-interval="7500" >
+            <img  src="../../assets/model4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="7500" >
+            <img  src="../../assets/model2.jpg" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+<div class="searchbox">
+  <input type="text" class="form-control" name="search"  [(ngModel)]="searchText" placeholder="search by name">
+</div>
+<div class="second ">
+  <div class="row">
+    <div class="col-md-4"*ngFor="let item of filtercategory | filter:searchText ">
+      <div class="crd ">
+          <img  src="{{item.img}}" alt="Card image cap">
+          <h3 style="text-overflow: ellipsis;white-space:nowrap;overflow: hidden;" class="title">{{item.name}}</h3>
+          <h3 class="title"><strong>Price :</strong>{{item.Rs}}</h3>
+          <div class="btn1">
+            <button routerLink="view/{{item.id}}" class= "btn btn-primary">View</button>&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="addtocart(item)">Add to Cart</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

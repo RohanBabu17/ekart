@@ -1,0 +1,45 @@
+
+    <nav>
+        <h3>Ecart</h3>
+        <ul>
+            <li *ngIf="!loggedin()">
+                <h5 routerLink="">Home</h5>
+            </li>
+            <li *ngIf="!loggedin()"> 
+                <h5 routerLink="/user">Login</h5>
+            </li>
+            <li *ngIf="!loggedin()">
+                <h5 routerLink="/user">Register</h5>
+            </li>
+            <div *ngIf="loggedin()" class="dropdown" dropdown>
+                <a href="#" class="dropdown-toggle " dropdownToggle (click)="false">Welcome &nbsp;{{loggedinuser}}</a>
+                <div class="dropdown-menu" *dropdownMenu>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-bell"></i>&nbsp;Notifications</a>
+                  <a href="#" class="dropdown-item">
+                    <i class="far fa-user-circle"></i>&nbsp;My Profile</a>
+                  <a href="#" class="dropdown-item">
+                    <i class="fas fa-key"></i>&nbsp;Change Password</a>
+                  <a (click)="onlogout()" class="drop-down-item">
+                    <i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
+        
+                </div> 
+        
+            </div>
+        </ul>
+    </nav>
+    <!-- <div *ngIf="tag">
+        <ul class="category">
+            <ul >
+                <li class="left " *ngFor="let item of tag">
+                    <h4 routerLink="/tag/{{item.name}}">{{item.name}}</h4>
+                </li>
+                <li class="right1">
+                    <a routerLink="/checkout" >
+                        <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
+                        <div style="font-size: 10px;" class="badge bg-danger">{{totalitem}}</div>
+                    </a>
+                </li>
+            </ul>
+        </ul>   
+    </div>     -->

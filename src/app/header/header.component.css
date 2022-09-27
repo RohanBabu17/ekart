@@ -1,0 +1,88 @@
+nav{
+    background-color:rgb(235, 222, 222);
+}
+nav ul{
+    float: right;
+    list-style-type: none ;
+    padding-right: 50px;
+    padding-top: 20px;
+    
+
+}
+li{
+    display: inline-block;
+    padding-left: 20px;
+       
+    
+}
+
+ nav h3 {
+    
+    color:rgb(8, 8, 8);
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+
+}
+
+nav h5{
+    color:rgb(8, 8, 8);
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    cursor: pointer;
+
+}
+
+.form-control{
+    border-radius: 3px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.fa-cart-plus{
+    color: rgb(15, 14, 14);
+    
+}
+.dropdown{
+    
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+
+}
+.dropdown-menu{
+    background-color: rgb(235, 222, 222);
+}
+
+.dropdown-toggle{
+    color:rgb(10, 9, 9);
+    text-decoration: none;
+    
+
+}
+.dropdown-item{
+    color:rgb(14, 13, 13);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: large;
+    /* display: list-item; */
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+.drop-down-item{
+    color:rgb(14, 13, 13);
+    margin-left: 28px;
+    margin-right: 10px;
+    font-size: large;
+    padding-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+

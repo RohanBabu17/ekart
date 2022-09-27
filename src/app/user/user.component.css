@@ -1,0 +1,29 @@
+
+.cform{
+    width: 100%;
+    border: 1px #0e0d0d solid;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-style:oblique;
+    font-size: xx-large;
+    margin-left: 60px;
+}
+label{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.txt{
+    width:450px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.btn1{
+    margin-top: 10px;
+    margin-left: 43%;
+}

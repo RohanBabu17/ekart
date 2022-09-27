@@ -1,0 +1,68 @@
+.main-body{
+  
+    width: 100%;
+    margin-top: 15px;
+}
+.carousel-item img{
+    height: 600px;
+}
+.searchbox{
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 350px;
+    border:medium;
+    border-radius: 10px;
+    border-color: rgb(39, 41, 40);
+}
+.second{
+    margin-top: 15px;
+}
+.second img{
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 270px;
+    width: 300px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+    text-align: center; 
+    padding-left: 30px;
+}
+.btn1{
+    margin-left: 30%;
+}
+.crd{
+    border-color: rgb(228, 224, 224);
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-right: 60px;
+    height: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+.crd:hover{
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+.container-fluid{
+    background-color: rgb(180, 180, 207);
+}
+.item{
+    margin-left: 10px;
+    padding-left: 20px;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    padding-top: 10px;
+    
+}
+.fa-cart-plus{
+    margin-top: 10px;
+    margin-left: 600px;
+    color: rgb(15, 14, 14);
+    
+}
